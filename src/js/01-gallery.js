@@ -11,6 +11,7 @@ const galleryEl = document.querySelector("ul.gallery");
 const galleryMarkup = createGalleryMarkup(galleryItems);
 
 galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
+galleryEl.style.listStyle="none";
 
 function createGalleryMarkup(galleryItems) {
   return galleryItems
