@@ -25,10 +25,8 @@ refs.feedbackForm.addEventListener('submit', onFeedbackFormSubmit);
 function onFeedbackFormSubmit(evt) {
   evt.preventDefault();
   // imitation of sending form
-  console.log('Sending data:', formDataObj);
+  console.log(formDataObj);
   evt.currentTarget.reset();
-  console.log(evt.currentTarget);
-
   localStorage.removeItem(LOCALSTORAGE_KEY);
 }
 
