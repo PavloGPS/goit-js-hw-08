@@ -24,6 +24,12 @@ refs.feedbackForm.addEventListener('submit', onFeedbackFormSubmit);
 
 function onFeedbackFormSubmit(evt) {
   evt.preventDefault();
+  //Additional requirements from Slack channel (#mentor Hryhorii Chernysh  10:13) 
+  //The form should be sent only when both fields are filled
+  if (!refs.inputEmail.value || !refs.inputMessage.value) {
+    alert('Please fill all the fields, to submit your feedback!');
+    return;
+  }
   // imitation of sending form
   console.log(formDataObj);
   evt.currentTarget.reset();
